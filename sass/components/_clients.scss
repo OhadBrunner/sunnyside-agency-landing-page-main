@@ -1,0 +1,34 @@
+.clients {
+  text-align: center;
+  color: $color-dark-blue;
+
+  &__image {
+    border-radius: 50%;
+    width: 20%;
+    margin-bottom: 5rem;
+    transition: transform .4s;
+
+    &:hover {
+      transform: scale(2) translateY(-3px);
+    }
+  }
+
+  &__description {
+    color: lighten($color-dark-blue, 7%);
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: 500;
+    padding: 0 2rem;
+    margin-bottom: 5rem;
+  }
+
+  &__name {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__occupation {
+    font-size: 1rem;
+    color: $color-grey-dark-2;
+  }
+}

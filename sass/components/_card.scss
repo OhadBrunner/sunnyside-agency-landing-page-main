@@ -1,0 +1,45 @@
+.card {
+  position: relative;
+  margin-top: 1rem;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__side {
+    transition: all .8s ease; // all for all the different animations
+    backface-visibility: hidden;
+    // position: absolute; // after assigning absulot the card is scaling down only to the width it needs
+    // backface-visibility: hidden; // hide the back side of an element
+
+    &--front {
+
+    }
+
+    &--back {
+      background-color: orange;
+      transform: rotateY(180deg);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+
+
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}

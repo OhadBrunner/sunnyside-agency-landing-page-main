@@ -1,0 +1,55 @@
+.square {
+  position: absolute;
+  height: 500px;
+  width: 50%;
+  display: inline-block;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  transition: transform .3s;
+
+  &--1 {
+    top: 0;
+    left: 0;
+    background-color: $color-white-2-sunnyside;
+  }
+
+  &--2 {
+    top: 0;
+    right: 0;
+    background-image: url("../images/desktop/image-transform.jpg");
+  }
+
+  &--3 {
+    top: 500px;
+    left: 0;
+    background-image: url("../images/desktop/image-stand-out.jpg");
+  }
+
+  &--4 {
+    top: 500px;
+    right: 0;
+    background-color: $color-white-2-sunnyside;
+  }
+
+  &--5 {
+    top: 1000px;
+    left: 0;
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    text-align: center;
+  }
+
+  &--6 {
+    top: 1000px;
+    right: 0;
+    background-image: url("../images/desktop/image-photography.jpg");
+    text-align: center;
+  }
+
+
+  &:hover {
+    transform: translateY(2px) scale(1.2);
+    z-index: 200;
+    border: 10px solid orange;
+  }
+}
